@@ -12,6 +12,15 @@ h1 {
 form {
   width: 90%;
   margin: 0 auto;
-
   text-align: center;
+}
+
+section {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+section article {
+  border-bottom: solid 1px black;
 }

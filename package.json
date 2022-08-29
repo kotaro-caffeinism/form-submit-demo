@@ -6,9 +6,18 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "knex": "^2.2.0",
     "method-override": "^3.0.0",
     "pg": "^8.8.0"
+  },
+  "scripts": {
+    "start": "nodemon server",
+    "migrate": "npx knex migrate:latest",
+    "seed": "npx knex seed:run"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
