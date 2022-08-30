@@ -4,11 +4,11 @@
 
 HTML Form から 標準サポートされていない delete, patch リクエストを送信するためのコードです。
 
-[Zen]()
+[Zen](https://zenn.dev/caffeinism/articles/a01ae1f5c59a77)
 
 ## 使用しているライブラリ
 
-- backend: express, knex, **method-override**
+- backend: express, knex, dotenv, **method-override**
 - database: postgres
 - package manager: yarn
 
@@ -39,6 +39,8 @@ $ npm install
 または
 $ yarn install
 ```
+
+postgres を使用し、「form_submit_demo」という名前のデータベースを作成してください。
 
 以下のコマンドでビルドを実行してください。
 
