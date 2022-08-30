@@ -29,8 +29,16 @@ app.delete("/", async (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "index.html"));
 });
 
+app.patch("/", async (req, res) => {
+  console.log("accept patch request");
+  const { id, contents } = req.body;
+  await db("data").where({ id: id }).del();
+  await db("data").insert([{ id, contents }]);
+  res.sendFile(path.resolve(__dirname, "..", "index.html"));
+});
+
 app.get("/api/data", async (req, res) => {
-  const data = await db("data").select();
+  const data = await db("data").select().orderBy("id");
   res.json(data);
 });
 

@@ -10,9 +10,25 @@
   </head>
   <body>
     <h1>Form Submit Demo</h1>
+    <h2>データ一覧</h2>
     <section id="data"></section>
+    <h2>データを消す</h2>
     <form method="post" action="/?_method=DELETE">
       <input type="submit" value="データを消す" />
+    </form>
+    <h2>データを編集する</h2>
+    <form class="patch" method="post" action="/?_method=PATCH">
+      <section class="patch-input">
+        <section>
+          <label for="name">どのidのデータを編集しますか？</label>
+          <input type="number" name="id" />
+        </section>
+        <section>
+          <label for="name">内容を入力してください。</label>
+          <input type="text" name="contents" />
+        </section>
+      </section>
+      <button type="submit">編集完了</button>
     </form>
   </body>
 </html>
